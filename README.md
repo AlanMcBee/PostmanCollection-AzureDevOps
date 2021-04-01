@@ -28,7 +28,7 @@ This repository has a template Environment. To use this environment:
 
 If you target more than one organization or collection, just import the environment again or create duplicate environments. The Collection is expecting to target only one instance (an Azure DevOps organization or a Team Foundation collection) at at time.
 
-IMPORTANT: ***DO NOT STORE SENSITIVE VALUES LIKE PERSONAL ACCESS TOKENS OR PASSWORDS IN THE \"INITIAL VALUE\" COLUMN. ONLY STORE THESE SENSITIVE VALUES IN THE \"CURRENT VALUE\" COLUMN.***
+IMPORTANT: <span style="color:red;">***DO NOT STORE SENSITIVE VALUES LIKE PERSONAL ACCESS TOKENS OR PASSWORDS IN THE \"INITIAL VALUE\" COLUMN. ONLY STORE THESE SENSITIVE VALUES IN THE \"CURRENT VALUE\" COLUMN.***</span>
 
 Rather than switch environments to work with multiple projects, I find myself creating environment-local variables for the projects I want, then set the `My:Project` and `My:ProjectId` values to those variables. See the Example Environment to see how that could look. I also do this with Teams on a Project.
 
