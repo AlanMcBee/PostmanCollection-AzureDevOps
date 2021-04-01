@@ -82,9 +82,11 @@ If you need to reset the Collection's Authorization settings to support a Person
 
 8. Open the Environment you want to use for the targeted Azure DevOps instance. Suggested naming convention (choose the appropriate depth as needed):
 
-    Azure DevOps ▶ {*organization*}
-    Azure DevOps ▶ {*organization*}/{*project*}
-    Azure DevOps ▶ {*organization*}/{*project*}/{*team*}
+* Azure DevOps ▶ {*organization*}
+
+* Azure DevOps ▶ {*organization*}/{*project*}
+
+* Azure DevOps ▶ {*organization*}/{*project*}/{*team*}
 
 9.  Find or create the variable named `{{My:Ads:PersonalAccessToken}}`. Set the **Current Value** to the exact value copied from Azure DevOps. ONLY use the **Current Value** value, *never* the Initial Value, in order to prevent the value from being shared outside your local work area.
 
