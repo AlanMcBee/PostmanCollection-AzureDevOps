@@ -1,17 +1,17 @@
 {
-  "name": "vsts-open-api-to-postman-collection",
-  "version": "0.0.0",
-  "description": "VstsOpenApi-to-PostmanCollection",
-  "main": "app.js",
-  "author": {
-    "name": ""
-  },
-  "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean"
-  },
-  "devDependencies": {
-    "@types/node": "^14.14.7",
-    "typescript": "^4.0.5"
-  }
+    "name": "vsts-open-api-to-postman-collection",
+    "version": "0.0.0",
+    "description": "VstsOpenApi-to-PostmanCollection",
+    "main": "app.js",
+    "author": {
+        "name": ""
+    },
+    "type": "module",
+    "scripts": {
+        "build": "tsc --build",
+        "clean": "tsc --build --clean"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.7"
+    }
 }

@@ -1,11 +1,15 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es6",
-    "lib": ["es6"],
-    "sourceMap": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "compilerOptions": {
+        "lib": [
+            "ESNext"
+        ],
+        "module": "ESNext",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "target": "ESNext"
+    },
+    "exclude": [
+        "node_modules"
+    ]
 }
