@@ -3,6 +3,26 @@ PostmanCollection-AzureDevOps
 
 This Postman collection simplifies invoking the Azure DevOps REST API.
 
+Cloning
+-------
+
+On Windows, the submodule included in this repo will almost certainly cause an error if you haven't configured both Git and Windows to support long paths (i.e. paths longer than 260 characters).
+
+To configure Windows support for long paths, run this PowerShell command from an elevated console:
+
+``` PowerShell
+Set-ItemProperty -LiteralPath HKLM:\SYSTEM\ControlSet001\Control\FileSystem -Name 'LongPathsEnabled' -Value 1
+```
+
+To configure Git for Windows support for long paths, run this command from an elevated console:
+
+``` Batchfile
+git config --system core.longpaths true
+```
+
+Usage
+=====
+
 Postman Collections and Environments
 ------------------------------------
 
