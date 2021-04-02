@@ -1,18 +1,23 @@
-let Converter = require('openapi-to-postmanv2'),
-    FS = require('fs')
-    ;
+let Converter = require('openapi-to-postmanv2');
+let FS = require('node:fs')
 
 console.log('VstsOpenApi-to-PostmanCollection');
 
-let openApiJson = FS.readFileSync('..\\vsts-rest-api-specs\\specification\\core\\6.1\\core.json', {encoding: 'UTF8'})
+let openApiJson = FS.readFileSync('vsts-rest-api-specs\\specification\\core\\6.1\\core.json');
 
-Converter.convert({ type: 'string', data: openApiJson },
-  {}, (_err, conversionResult) => {
-    if (!conversionResult.result) {
-      console.log('Could not convert', conversionResult.reason);
+let openApi = JSON.parse(openApiJson);
+
+openApi['openapi'] = "3.0";
+
+Converter.convert(
+    { type: 'json', data: openApi },
+    { includeAuthInfoInExample: false },
+    (_err: any, conversionResult: { result: any; reason: any; output: { data: any; }[]; }) => {
+        if (!conversionResult.result) {
+            console.log('Could not convert\n', conversionResult.reason);
+        }
+        else {
+            console.log('The collection object is: ', conversionResult.output[0].data);
+        }
     }
-    else {
-      console.log('The collection object is: ', conversionResult.output[0].data);
-    }
-  }
 );
